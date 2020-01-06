@@ -4,7 +4,7 @@ services:
     image: docker.io/gogs/gogs:latest
     ports:
       - "10022:22"
-      - "13000:3000"
+      - "3000:3000"
     volumes:
       - $PWD/gogs:/data
     restart: always
