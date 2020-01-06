@@ -7,6 +7,10 @@ services:
       - "3000:3000"
     volumes:
       - $PWD/gogs:/data
+    environment:
+      - TZ=Asia/Shanghai
     restart: always
+    networks:
+      - gogs-net
 networks: # 创建网络
   gogs-net:
