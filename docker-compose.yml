@@ -1,0 +1,12 @@
+version: "3"
+services:
+  gogs:
+    image: docker.io/gogs/gogs:latest
+    ports:
+      - "10022:22"
+      - "13000:3000"
+    volumes:
+      - $PWD/gogs:/data
+    restart: always
+networks: # 创建网络
+  gogs-net:
